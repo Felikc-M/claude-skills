@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>TRELY — Slide template (Dark)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --tr-green:#273C3F; --tr-green-bg:#0E1B1D; --tr-green-card:#1A2F2F;
+  --tr-gold:#C6A064; --tr-cream:#F7F6F4; --tr-tag:#EDE4D1;
+  --tr-gray-60:#9AA0A2; --tr-gray-40:#6B6F71;
+  --r-lg:24px; --r-xl:32px; --r-pill:999px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter Tight',sans-serif;background:#000;letter-spacing:-0.01em}
+.slide{
+  width:1920px;height:1080px;background:var(--tr-green-bg);color:var(--tr-cream);
+  position:relative;overflow:hidden;padding:56px 96px 72px;
+  display:flex;flex-direction:column;
+}
+.head{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;color:var(--tr-gold)}
+.logo svg{width:32px;height:32px}
+.logo span{font-weight:700;font-size:22px;color:var(--tr-gold);opacity:.9}
+.nav{display:flex;gap:8px;flex:1;justify-content:center}
+.nav a{font-size:15px;font-weight:500;color:var(--tr-gray-60);padding:8px 18px;border-radius:var(--r-pill);text-decoration:none}
+.nav a.active{background:rgba(198,160,100,.15);color:var(--tr-gold)}
+.counter{font-size:14px;color:var(--tr-gray-40)}
+
+.content{margin-top:48px;flex:1;display:flex;flex-direction:column}
+h1{font-size:72px;font-weight:700;line-height:1.05;letter-spacing:-0.025em;margin-bottom:24px;color:#fff}
+h1 .gold{color:var(--tr-gold)}
+.sub{font-size:22px;color:var(--tr-gray-60);max-width:900px}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:64px}
+.dcard{background:var(--tr-green-card);border-radius:var(--r-xl);padding:36px}
+.dcard h3{font-size:22px;font-weight:600;margin-bottom:16px;color:#fff}
+.dcard p{font-size:16px;color:var(--tr-gray-60);line-height:1.5}
+.dcard .stat{font-size:64px;font-weight:700;color:var(--tr-gold);letter-spacing:-0.02em;line-height:1;margin-bottom:8px}
+.dcard .stat-label{font-size:15px;color:var(--tr-gray-60)}
+.gold-pill{display:inline-block;background:var(--tr-gold);color:#0F1014;padding:6px 16px;border-radius:var(--r-pill);font-size:14px;font-weight:600;margin-bottom:16px}
+
+.foot{display:flex;justify-content:space-between;font-size:14px;color:var(--tr-gray-40);margin-top:auto}
+</style>
+</head>
+<body>
+
+<section class="slide">
+  <header class="head">
+    <a class="logo" href="#">
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3">
+        <path d="M32 6 L58 20 L58 48 L32 62 L6 48 L6 20 Z"/>
+        <path d="M32 6 L32 32 L6 20 M32 32 L58 20 M32 32 L32 62"/>
+        <path d="M32 28 L29 38 L32 36 L35 38 Z" fill="currentColor"/>
+        <path d="M22 42 L26 50 M30 44 L30 54 M34 44 L34 54 M38 42 L42 50"/>
+      </svg>
+      <span>Trely</span>
+    </a>
+    <nav class="nav">
+      <a>О нас</a>
+      <a>Продукт</a>
+      <a class="active">Бизнес-модель</a>
+      <a>Предложение</a>
+    </nav>
+    <div class="counter">20 | 28</div>
+  </header>
+
+  <div class="content">
+    <h1>Реальные пользователи. <span class="gold">Реальные сделки.</span></h1>
+    <p class="sub">Подтверждённый спрос до масштабирования продукта</p>
+
+    <div class="cards">
+      <div class="dcard">
+        <div class="stat">6 500+</div>
+        <div class="stat-label">пользователей в месяц</div>
+      </div>
+      <div class="dcard">
+        <div class="stat">$300 000</div>
+        <div class="stat-label">реализовано</div>
+      </div>
+      <div class="dcard">
+        <span class="gold-pill">Рост органический</span>
+        <h3>Усиливается маркетингом</h3>
+        <p>Рост происходит без платных кампаний и усиливается через партнёрства.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <span>Бизнес-модель</span>
+    <span>2026</span>
+  </footer>
+</section>
+
+</body>
+</html>

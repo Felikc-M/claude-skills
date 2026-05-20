@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>TRELY — Slide template (Light)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --tr-green:#273C3F; --tr-gold:#C6A064; --tr-cream:#F7F6F4;
+  --tr-white:#FFFFFF; --tr-ink:#0F1014; --tr-tag:#EDE4D1;
+  --tr-gray-60:#6B6F71; --tr-gray-40:#A0A4A6; --tr-cream-sub:#E8E2D2;
+  --r-lg:24px; --r-xl:32px; --r-pill:999px;
+  --sh-soft:0 4px 24px rgba(39,60,63,.06);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter Tight',-apple-system,system-ui,sans-serif;background:#222;letter-spacing:-0.01em}
+.slide{
+  width:1920px;height:1080px;background:var(--tr-cream);color:var(--tr-ink);
+  position:relative;overflow:hidden;padding:56px 96px 72px;
+  display:flex;flex-direction:column;
+}
+/* Header */
+.head{display:flex;align-items:center;justify-content:space-between;gap:48px}
+.logo{display:flex;align-items:center;gap:10px;color:var(--tr-green)}
+.logo svg{width:32px;height:32px}
+.logo span{font-weight:700;font-size:22px;color:var(--tr-green);opacity:.7}
+.nav{display:flex;gap:8px;flex:1;justify-content:center}
+.nav a{font-size:15px;font-weight:500;color:var(--tr-gray-60);padding:8px 18px;border-radius:var(--r-pill);text-decoration:none}
+.nav a.active{background:var(--tr-tag);color:var(--tr-green)}
+.counter{font-size:14px;color:var(--tr-gray-40)}
+
+/* Content area */
+.content{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:48px}
+.caption{font-size:18px;color:var(--tr-gray-60);margin-bottom:16px}
+h1{font-size:88px;font-weight:700;line-height:1.02;letter-spacing:-0.025em;margin-bottom:24px}
+h1 .gold{color:var(--tr-gold)}
+h1 .tag{background:var(--tr-tag);color:var(--tr-green);padding:0 18px;border-radius:var(--r-pill);display:inline-block}
+.sub{font-size:24px;color:var(--tr-gray-60);line-height:1.4;max-width:640px}
+
+/* Illust column */
+.illust{position:relative;aspect-ratio:1;width:100%;display:flex;align-items:center;justify-content:center}
+.illust .arc{position:absolute;inset:5%;border-radius:50%;background:var(--tr-cream-sub);opacity:.6;z-index:0}
+.illust img{position:relative;width:80%;height:80%;object-fit:contain;z-index:1}
+
+/* Cards row */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.card{background:var(--tr-white);border-radius:var(--r-xl);padding:36px;box-shadow:var(--sh-soft)}
+.card h3{font-size:24px;font-weight:600;margin-bottom:24px}
+.card .stat{font-size:48px;font-weight:700;color:var(--tr-gold);letter-spacing:-0.02em;line-height:1}
+.card .stat-label{font-size:14px;color:var(--tr-gray-60);margin-top:4px}
+.card ul{list-style:none}
+.card li{font-size:16px;color:var(--tr-gray-60);padding:6px 0}
+.card li::before{content:'•';color:var(--tr-gold);margin-right:10px}
+
+/* Footer */
+.foot{display:flex;justify-content:space-between;font-size:14px;color:var(--tr-gray-40);margin-top:auto}
+
+/* Divider */
+.move-divider{margin-top:24px;font-size:18px;color:var(--tr-gray-60);letter-spacing:.04em}
+.move-divider span{margin:0 12px;color:var(--tr-gray-40)}
+</style>
+</head>
+<body>
+
+<!-- ============ SLIDE TEMPLATE — заменяй контент ============ -->
+<section class="slide">
+  <header class="head">
+    <a class="logo" href="#">
+      <!-- Trely cube logo (inline SVG, упрощённый) -->
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3">
+        <path d="M32 6 L58 20 L58 48 L32 62 L6 48 L6 20 Z"/>
+        <path d="M32 6 L32 32 L6 20 M32 32 L58 20 M32 32 L32 62"/>
+        <path d="M32 28 L29 38 L32 36 L35 38 Z" fill="currentColor"/>
+        <path d="M22 42 L26 50 M30 44 L30 54 M34 44 L34 54 M38 42 L42 50"/>
+      </svg>
+      <span>Trely</span>
+    </a>
+    <nav class="nav">
+      <a>О нас</a>
+      <a class="active">Продукт</a>
+      <a>Бизнес-модель</a>
+      <a>Предложение</a>
+    </nav>
+    <div class="counter">07 | 28</div>
+  </header>
+
+  <div class="content">
+    <div>
+      <div class="caption">Первый продукт инфраструктуры Trely</div>
+      <h1>Trely <span class="gold">Shipping</span></h1>
+      <p class="sub">Глобальная P2P доставка через сеть путешественников</p>
+      <div class="move-divider">Move <span>|</span> Live <span>|</span> Connect</div>
+    </div>
+
+    <div class="illust">
+      <div class="arc"></div>
+      <img src="path/to/shipping-character.png" alt="" />
+    </div>
+  </div>
+
+  <footer class="foot">
+    <span>Продукт</span>
+    <span>2026</span>
+  </footer>
+</section>
+
+</body>
+</html>

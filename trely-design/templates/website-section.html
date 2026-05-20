@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>TRELY — Website section template</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --tr-green:#273C3F; --tr-gold:#C6A064; --tr-cream:#F7F6F4;
+  --tr-white:#FFFFFF; --tr-ink:#0F1014; --tr-tag:#EDE4D1;
+  --tr-gray-60:#6B6F71; --tr-gray-40:#A0A4A6; --tr-cream-sub:#E8E2D2;
+  --r-md:16px; --r-lg:24px; --r-xl:32px; --r-pill:999px;
+  --sh-soft:0 4px 24px rgba(39,60,63,.06);
+  --sh-medium:0 8px 32px rgba(39,60,63,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter Tight',-apple-system,system-ui,sans-serif;background:var(--tr-cream);color:var(--tr-ink);letter-spacing:-0.01em;line-height:1.5}
+
+/* ====== HEADER ====== */
+.site-header{position:sticky;top:0;z-index:10;background:rgba(247,246,244,.85);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:space-between;padding:20px 64px;border-bottom:1px solid rgba(0,0,0,.04)}
+.site-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--tr-ink)}
+.site-logo svg{width:32px;height:32px;color:var(--tr-ink)}
+.site-logo span{font-weight:700;font-size:22px}
+.site-nav{display:flex;gap:32px}
+.site-nav a{color:var(--tr-ink);font-size:15px;font-weight:500;text-decoration:none}
+.site-actions{display:flex;align-items:center;gap:16px}
+.lang{font-size:14px;color:var(--tr-gray-60);cursor:pointer}
+.btn-primary{background:var(--tr-ink);color:#fff;font-family:inherit;font-weight:600;font-size:15px;padding:12px 24px;border-radius:var(--r-pill);border:none;cursor:pointer;box-shadow:0 2px 8px rgba(15,16,20,.1)}
+.btn-secondary{background:transparent;color:var(--tr-ink);border:1.5px solid var(--tr-ink);font-family:inherit;font-weight:500;font-size:15px;padding:10px 22px;border-radius:var(--r-pill);cursor:pointer}
+
+/* ====== HERO ====== */
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;padding:80px 96px 120px;align-items:center;max-width:1440px;margin:0 auto}
+.hero h1{font-size:clamp(48px,6vw,80px);font-weight:700;line-height:1.05;letter-spacing:-0.025em;margin-bottom:24px}
+.hero h1 .gold{color:var(--tr-gold)}
+.hero p{font-size:20px;line-height:1.5;color:var(--tr-gray-60);margin-bottom:40px;max-width:560px}
+.hero-cta{display:flex;gap:16px;margin-bottom:32px;flex-wrap:wrap}
+.brand-divider{font-size:16px;color:var(--tr-gray-60);letter-spacing:.04em}
+.brand-divider span{color:var(--tr-gray-40);margin:0 12px}
+.hero-illust{position:relative;aspect-ratio:1}
+.hero-illust .arc{position:absolute;inset:5%;border-radius:50%;background:var(--tr-cream-sub);opacity:.55}
+.hero-illust img{position:relative;width:100%;height:100%;object-fit:contain}
+
+/* ====== SECTION ====== */
+.section{padding:96px;max-width:1440px;margin:0 auto}
+.section h2{font-size:clamp(36px,4vw,56px);font-weight:700;letter-spacing:-0.02em;line-height:1.1;margin-bottom:16px}
+.section .lead{font-size:20px;color:var(--tr-gray-60);max-width:720px;margin-bottom:56px}
+
+/* ====== SERVICES GRID ====== */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service{position:relative;display:block;background:var(--tr-white);border-radius:var(--r-xl);padding:32px;box-shadow:var(--sh-soft);text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s}
+.service:hover{transform:translateY(-2px);box-shadow:var(--sh-medium)}
+.service-illust{aspect-ratio:1;margin-bottom:24px;display:flex;align-items:center;justify-content:center}
+.service-illust img{width:80%;height:80%;object-fit:contain}
+.service h3{font-size:24px;font-weight:600;margin-bottom:8px}
+.service p{color:var(--tr-gray-60);font-size:16px}
+.status{position:absolute;top:20px;right:20px;font-size:13px;font-weight:500;padding:6px 12px;border-radius:var(--r-pill)}
+.status--active{background:var(--tr-tag);color:var(--tr-green)}
+.status--soon{background:#F0EEEA;color:var(--tr-gray-60)}
+
+/* ====== STEPS ====== */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;list-style:none}
+.steps li{padding:24px}
+.steps .num{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:var(--tr-gold);color:var(--tr-ink);font-weight:700;font-size:20px;margin-bottom:16px}
+.steps h4{font-size:18px;font-weight:600;margin-bottom:4px}
+.steps p{color:var(--tr-gray-60);font-size:15px}
+
+/* ====== FAQ ====== */
+.faq{max-width:900px;margin:0 auto}
+.faq-item{border-bottom:1px solid #E5E2DC;padding:24px 0}
+.faq-item summary{font-size:18px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+.faq-item summary::after{content:'+';color:var(--tr-gold);font-size:24px;line-height:1}
+.faq-item[open] summary::after{content:'−'}
+.faq-item p{color:var(--tr-gray-60);margin-top:16px;line-height:1.6}
+
+/* ====== FOOTER ====== */
+.site-footer{padding:48px 64px;background:var(--tr-cream);border-top:1px solid rgba(0,0,0,.04)}
+.footer-row{display:flex;justify-content:space-between;align-items:center;max-width:1440px;margin:0 auto;flex-wrap:wrap;gap:24px}
+.footer-left{display:flex;align-items:center;gap:12px;color:var(--tr-gray-60);font-size:14px}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap}
+.footer-links a{color:var(--tr-gray-60);font-size:14px;text-decoration:none}
+
+@media (max-width: 960px){
+  .site-header{padding:16px 24px}
+  .site-nav{display:none}
+  .hero{grid-template-columns:1fr;padding:48px 24px;gap:32px}
+  .section{padding:64px 24px}
+  .services{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ SITE TEMPLATE ============ -->
+
+<header class="site-header">
+  <a class="site-logo" href="/">
+    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3">
+      <path d="M32 6 L58 20 L58 48 L32 62 L6 48 L6 20 Z"/>
+      <path d="M32 6 L32 32 L6 20 M32 32 L58 20 M32 32 L32 62"/>
+      <path d="M32 28 L29 38 L32 36 L35 38 Z" fill="currentColor"/>
+      <path d="M22 42 L26 50 M30 44 L30 54 M34 44 L34 54 M38 42 L42 50"/>
+    </svg>
+    <span>Trely</span>
+  </a>
+  <nav class="site-nav">
+    <a href="#shipping">Отправить / Доставить</a>
+    <a href="#how">Как это работает</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <div class="site-actions">
+    <span class="lang">RU</span>
+    <button class="btn-primary">Войти</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Trely — твой мир путешествий <span class="gold">в одном месте</span></h1>
+    <p>Мы создаём экосистему сервисов для путешественников: от доставки посылок и поиска попутчиков до клубов, жилья и знакомств.</p>
+    <div class="hero-cta">
+      <button class="btn-primary">Отправить / Доставить</button>
+      <button class="btn-secondary">Узнать больше</button>
+    </div>
+    <div class="brand-divider">Move <span>|</span> Live <span>|</span> Connect</div>
+  </div>
+  <div class="hero-illust">
+    <div class="arc"></div>
+    <img src="path/to/main-mascot.png" alt="" />
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <h2>Сервисы Trely</h2>
+  <p class="lead">Один профиль. Один уровень доверия. Все сервисы перемещения и жизни между странами.</p>
+
+  <div class="services">
+    <a class="service" href="/shipping">
+      <span class="status status--active">Активно</span>
+      <div class="service-illust"><img src="path/to/box.png" alt="" /></div>
+      <h3>Trely Shipping</h3>
+      <p>Доставка посылок через попутчиков</p>
+    </a>
+
+    <a class="service" href="/club">
+      <span class="status status--active">Активно</span>
+      <div class="service-illust"><img src="path/to/palm.png" alt="" /></div>
+      <h3>Trely Travel Club</h3>
+      <p>Сообщество и подбор сервисов в каждой стране</p>
+    </a>
+
+    <a class="service" href="/car">
+      <span class="status status--soon">Скоро</span>
+      <div class="service-illust"><img src="path/to/car.png" alt="" /></div>
+      <h3>Trely Car</h3>
+      <p>Совместные поездки между городами</p>
+    </a>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="how">
+  <h2>Как это работает</h2>
+
+  <ol class="steps">
+    <li>
+      <span class="num">1</span>
+      <h4>Создать заявку</h4>
+      <p>Опишите маршрут, дату и посылку</p>
+    </li>
+    <li>
+      <span class="num">2</span>
+      <h4>Найти попутчика</h4>
+      <p>Выберите по маршруту и рейтингу</p>
+    </li>
+    <li>
+      <span class="num">3</span>
+      <h4>Передать</h4>
+      <p>Из рук в руки в удобной точке</p>
+    </li>
+    <li>
+      <span class="num">4</span>
+      <h4>Оплатить</h4>
+      <p>Деньги поступают после доставки</p>
+    </li>
+  </ol>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <h2>Ответы на частые вопросы</h2>
+  <div class="faq">
+    <details class="faq-item">
+      <summary>Как работает доставка через попутчика?</summary>
+      <p>Вы создаёте заявку с маршрутом, выбираете проверенного попутчика по рейтингу и договариваетесь о деталях в чате. Деньги замораживаются в Escrow и переводятся после успешной передачи посылки.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Сколько стоит?</summary>
+      <p>Стоимость обсуждается напрямую с попутчиком. Trely берёт комиссию 15% от сделки за безопасность и поддержку.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Что если посылка не дошла?</summary>
+      <p>Действует Trust Core Trely — KYC проверка, Escrow удержание, страхование операций и поддержка 24/7.</p>
+    </details>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-row">
+    <div class="footer-left">
+      <svg width="24" height="24" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3">
+        <path d="M32 6 L58 20 L58 48 L32 62 L6 48 L6 20 Z"/>
+      </svg>
+      <span>Trely, 2026 — Все права защищены</span>
+    </div>
+    <div class="footer-links">
+      <a href="#">Политика конфиденциальности</a>
+      <a href="#">Пользовательское соглашение</a>
+      <a href="#">Telegram</a>
+      <a href="#">WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
