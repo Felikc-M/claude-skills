@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Надёжная доставка руками реальных людей | Trely</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* TRELY tokens */
+    --tr-green:#273C3F;
+    --tr-green-card:#1A2F2F;
+    --tr-gold:#C6A064;
+    --tr-gold-grad-1:#D4B57A;
+    --tr-gold-grad-2:#A8854F;
+    --tr-cream:#F7F6F4;
+    --tr-cream-sub:#E8E2D2;
+    --tr-white:#FFFFFF;
+    --tr-ink:#0F1014;
+    --tr-tag:#EDE4D1;
+    --tr-gray-60:#6B6F71;
+    --tr-gray-40:#A0A4A6;
+    --tr-divider:#E5E2DC;
+
+    --r-sm:8px;
+    --r-md:16px;
+    --r-lg:24px;
+    --r-xl:32px;
+    --r-pill:999px;
+
+    --sh-soft:0 4px 24px rgba(39,60,63,.06);
+    --sh-medium:0 8px 32px rgba(39,60,63,.10);
+    --sh-btn:0 2px 8px rgba(15,16,20,.10);
+
+    --ff:'Inter Tight',-apple-system,system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--tr-cream);color:var(--tr-ink);font-family:var(--ff);font-weight:400;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  button{font-family:inherit;cursor:pointer;border:none;background:none}
+  .container{max-width:1320px;margin:0 auto;padding:0 64px}
+  @media(max-width:900px){.container{padding:0 24px}}
+
+  h1{font-size:56px;font-weight:500;line-height:1.14;letter-spacing:-0.01em}
+  h2{font-size:40px;font-weight:500;line-height:1.15;letter-spacing:-0.01em}
+  h3{font-size:20px;font-weight:500;letter-spacing:-0.01em}
+
+  .eyebrow{display:inline-block;font-size:13px;color:var(--tr-gold);text-transform:uppercase;letter-spacing:0.14em;font-weight:600;margin-bottom:14px}
+  .muted{color:var(--tr-gray-60)}
+  .gold{color:var(--tr-gold)}
+  .tag-inline{background:var(--tr-tag);color:var(--tr-green);padding:0 18px;border-radius:var(--r-pill);display:inline-block}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:var(--tr-tag);color:var(--tr-green);font-size:13px;font-weight:500;padding:6px 14px;border-radius:var(--r-pill)}
+  .pill .dot{width:6px;height:6px;border-radius:50%;background:var(--tr-gold)}
+  .brand-divider{font-size:15px;color:var(--tr-gray-60);letter-spacing:0.06em;font-weight:500}
+  .brand-divider span{color:var(--tr-gray-40);margin:0 10px}
+
+  /* BUTTONS */
+  .btn-primary{background:var(--tr-ink);color:var(--tr-white);font-weight:600;font-size:15px;padding:14px 28px;border-radius:var(--r-pill);border:none;cursor:pointer;box-shadow:var(--sh-btn);display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:transform .15s}
+  .btn-primary:hover{transform:translateY(-1px)}
+  .btn-secondary{background:transparent;color:var(--tr-ink);border:1.5px solid var(--tr-ink);font-weight:500;font-size:15px;padding:12px 26px;border-radius:var(--r-pill);display:inline-flex;align-items:center;justify-content:center;gap:8px}
+  .btn-gold{background:linear-gradient(90deg,var(--tr-gold-grad-1) 0%,var(--tr-gold-grad-2) 100%);color:#fff;font-weight:600;font-size:15px;padding:14px 28px;border-radius:var(--r-pill);box-shadow:0 2px 12px rgba(168,133,79,.25);display:inline-flex;align-items:center;justify-content:center;gap:8px}
+  .btn-light{background:#fff;color:var(--tr-ink);font-weight:600;font-size:15px;padding:14px 28px;border-radius:var(--r-pill);display:inline-flex;align-items:center;justify-content:center;gap:8px}
+  .btn-ghost-dark{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);font-weight:500;font-size:15px;padding:12px 26px;border-radius:var(--r-pill);display:inline-flex;align-items:center;justify-content:center}
+
+  /* HEADER */
+  header.site{position:sticky;top:0;z-index:50;background:var(--tr-cream)}
+  .nav{display:flex;align-items:center;gap:32px;height:72px}
+  .logo{font-size:28px;font-weight:600;letter-spacing:-0.02em;color:var(--tr-ink)}
+  .nav-links{display:flex;gap:28px;align-items:center;margin-left:24px}
+  .nav-links a{font-size:15px;display:flex;align-items:center;gap:6px;color:#1a1a1a;font-weight:500;padding:0;border-radius:0;background:none}
+  .nav-links a.muted-gold{color:var(--tr-gold)}
+  .nav-links .plus{display:inline-flex;width:20px;height:20px;border-radius:50%;background:rgba(198,160,100,0.10);color:var(--tr-gold);align-items:center;justify-content:center;font-size:14px;font-weight:500}
+  .nav-right{margin-left:auto;display:flex;align-items:center;gap:16px}
+  .lang-pill{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:12px;padding:6px 10px;font-size:14px;font-weight:500}
+  .lang-pill .flag{width:22px;height:22px;border-radius:50%;background:#D52B1E;display:inline-block;position:relative;overflow:hidden}
+  .lang-pill .flag::before{content:"";position:absolute;inset:0;background:linear-gradient(#fff 33%,#0039A6 33% 66%,#D52B1E 66%)}
+  .profile-pill{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:500}
+  .profile-pill .avatar{width:28px;height:28px;border-radius:50%;background:#EFEAE2;display:flex;align-items:center;justify-content:center;color:#9A8868}
+  .chat-btn{position:relative;width:40px;height:40px;border-radius:50%;background:#F4F2EE;display:flex;align-items:center;justify-content:center}
+  .chat-btn .badge{position:absolute;top:-2px;right:-2px;background:#FF5F4D;color:#fff;font-size:11px;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-weight:600}
+
+  /* HERO */
+  .hero{position:relative;padding:48px 0 0;overflow:hidden}
+  .hero::before{content:"";position:absolute;top:-300px;right:-200px;width:760px;height:760px;border-radius:50%;background:var(--tr-cream-sub);opacity:.45;z-index:0}
+  .hero::after{content:"";position:absolute;top:160px;left:-300px;width:680px;height:680px;border-radius:50%;background:var(--tr-cream-sub);opacity:.4;z-index:0}
+  .hero-inner{position:relative;z-index:1;text-align:center}
+  .hero h1{margin-top:20px}
+  .hero p.lead{margin-top:22px;font-size:20px;color:var(--tr-gray-60);line-height:1.5;max-width:580px;margin-left:auto;margin-right:auto}
+  .hero .brand-divider{margin-top:22px}
+
+  .search-card{margin:38px auto 0;background:#fff;border-radius:var(--r-xl);box-shadow:var(--sh-medium);padding:18px;display:grid;grid-template-columns:1fr auto 1fr 1fr auto;gap:14px;align-items:center;max-width:1180px}
+  .search-field{padding:18px 22px;border-radius:14px;border:1px solid var(--tr-divider);background:#fff;display:flex;align-items:center}
+  .search-field input{width:100%;border:none;outline:none;font-size:15px;font-family:inherit;background:transparent;color:var(--tr-ink)}
+  .search-field input::placeholder{color:var(--tr-gray-60);font-weight:400}
+  .swap-btn{width:34px;height:34px;border-radius:50%;background:var(--tr-green);display:flex;align-items:center;justify-content:center;color:#fff}
+  .date-field{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-radius:14px;border:1px solid var(--tr-divider);gap:10px}
+  .date-field input{border:none;outline:none;font-size:15px;font-family:inherit;background:transparent;width:100%;color:var(--tr-ink)}
+  .date-field input::placeholder{color:var(--tr-gray-60);font-weight:400}
+  .search-card .btn-primary{background:var(--tr-gold);color:#fff;border-radius:14px;padding:0 50px;height:60px;font-weight:600;font-size:16px;box-shadow:none}
+  .search-card .btn-primary:hover{background:#B8915A;transform:none}
+
+  /* HERO STATS */
+  .hero-stats{margin:32px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:880px;background:#fff;border-radius:var(--r-xl);padding:20px 12px;position:relative;z-index:1;box-shadow:var(--sh-soft)}
+  .hero-stats .stat{text-align:center;padding:6px 16px;border-right:1px solid var(--tr-divider)}
+  .hero-stats .stat:last-child{border-right:none}
+  .hero-stats .stat .num{font-size:30px;font-weight:700;color:var(--tr-gold);line-height:1;letter-spacing:-0.02em}
+  .hero-stats .stat .num small{font-size:18px;font-weight:600}
+  .hero-stats .stat .lbl{margin-top:8px;font-size:12px;color:var(--tr-gray-60);line-height:1.35}
+  @media(max-width:900px){
+    .hero-stats{grid-template-columns:1fr 1fr;gap:14px 0}
+    .hero-stats .stat:nth-child(2){border-right:none}
+    .hero-stats .stat:nth-child(-n+2){border-bottom:1px solid var(--tr-divider);padding-bottom:14px}
+  }
+
+  .hero-illustration{position:relative;z-index:1;margin:40px auto 0;max-width:760px;text-align:center}
+  .hero-illustration img{width:100%;height:auto;max-width:640px;margin:0 auto}
+
+  /* TRUST STRIP — deep green */
+  .trust-strip{background:var(--tr-green);color:var(--tr-cream);padding:32px 0;margin-top:-30px;position:relative;z-index:2;border-radius:var(--r-xl) var(--r-xl) 0 0}
+  .trust-strip .row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;align-items:center}
+  .trust-item{display:flex;align-items:center;gap:14px;font-size:14px;color:#cfd1d1}
+  .trust-item .ico{width:44px;height:44px;border-radius:var(--r-md);background:rgba(198,160,100,.15);display:flex;align-items:center;justify-content:center;color:var(--tr-gold);flex:0 0 44px}
+  .trust-item b{display:block;color:#fff;font-weight:600;font-size:14px;margin-bottom:2px}
+  .trust-item span{color:rgba(255,255,255,.55);font-size:12px;line-height:1.4}
+  @media(max-width:900px){.trust-strip .row{grid-template-columns:1fr 1fr;gap:18px}}
+
+  /* SECTION */
+  .section{padding:96px 0}
+  .section-head{text-align:center;margin-bottom:56px}
+  .section-head p{margin-top:16px;font-size:17px;color:var(--tr-gray-60);max-width:580px;margin-left:auto;margin-right:auto;line-height:1.55}
+
+  /* CALCULATOR */
+  .calc{background:#fff;border-radius:var(--r-xl);padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;box-shadow:var(--sh-soft);position:relative;overflow:hidden}
+  .calc::before{content:"";position:absolute;bottom:-200px;right:-150px;width:480px;height:480px;border-radius:50%;background:var(--tr-cream-sub);opacity:.4;z-index:0}
+  .calc > *{position:relative;z-index:1}
+  .calc .text h2{margin:14px 0 18px}
+  .calc .text p{font-size:17px;line-height:1.55;color:var(--tr-gray-60);max-width:480px}
+  .calc .bullets{margin-top:28px;display:flex;flex-direction:column;gap:14px;list-style:none;padding:0}
+  .calc .bullets li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--tr-ink);line-height:1.5}
+  .calc .bullets li::before{content:"";width:20px;height:20px;border-radius:50%;background:var(--tr-gold);flex:0 0 20px;margin-top:2px;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");background-size:13px;background-repeat:no-repeat;background-position:center}
+  .calc-widget{background:var(--tr-cream);border-radius:var(--r-xl);padding:32px;border:1px solid var(--tr-divider)}
+  .calc-widget h3{font-size:18px;margin-bottom:22px;letter-spacing:-0.01em}
+  .calc-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+  .calc-field{background:#fff;border-radius:var(--r-md);padding:14px 18px;border:1px solid var(--tr-divider)}
+  .calc-field .lbl{font-size:12px;color:var(--tr-gray-60);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.06em;font-weight:500}
+  .calc-field .val{font-size:15px;font-weight:600}
+  .calc-result{margin-top:22px;border-top:1px dashed var(--tr-divider);padding-top:22px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+  .calc-result .lbl{font-size:13px;color:var(--tr-gray-60)}
+  .calc-result .price{font-size:42px;font-weight:700;color:var(--tr-gold);line-height:1;letter-spacing:-0.02em;margin-top:4px}
+  .calc-result .price small{font-size:22px;color:var(--tr-gold);opacity:.55;font-weight:600}
+  .calc-result .delta{background:var(--tr-tag);color:var(--tr-green);padding:8px 14px;border-radius:var(--r-pill);font-size:12px;font-weight:600;white-space:nowrap}
+  @media(max-width:900px){.calc{grid-template-columns:1fr;padding:32px 24px}}
+
+  /* COMPARISON TABLE */
+  .compare-wrap{background:#fff;border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-soft)}
+  .compare{width:100%;border-collapse:collapse;font-size:15px}
+  .compare th,.compare td{padding:20px 22px;text-align:center;border-bottom:1px solid var(--tr-divider)}
+  .compare th{font-weight:500;background:var(--tr-cream);color:var(--tr-ink);font-size:14px;letter-spacing:-0.01em}
+  .compare th:first-child,.compare td:first-child{text-align:left;font-weight:500}
+  .compare tr:last-child td{border-bottom:none}
+  .compare .col-trely{background:rgba(198,160,100,.08);color:var(--tr-ink)}
+  .compare th.col-trely{background:var(--tr-green);color:#fff;font-weight:600;font-size:15px}
+  .compare th.col-trely::before{content:"";display:inline-block;width:14px;height:14px;background:var(--tr-gold);border-radius:50%;margin-right:8px;vertical-align:middle}
+  .compare .col-trely b{color:var(--tr-gold)}
+  .check{display:inline-flex;width:24px;height:24px;border-radius:50%;background:var(--tr-gold);color:#fff;align-items:center;justify-content:center;font-size:14px;font-weight:700}
+  .cross{display:inline-flex;width:24px;height:24px;border-radius:50%;background:var(--tr-cream);color:var(--tr-gray-40);align-items:center;justify-content:center;font-size:14px;font-weight:700}
+  .partial{color:var(--tr-gray-60);font-weight:500;font-size:13px;font-style:italic}
+
+  /* HOW IT WORKS — Trely steps */
+  .hw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .hw-card{background:#fff;border-radius:var(--r-xl);padding:36px 30px;position:relative;box-shadow:var(--sh-soft);transition:box-shadow .2s,transform .2s}
+  .hw-card:hover{box-shadow:var(--sh-medium);transform:translateY(-2px)}
+  .hw-num{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:var(--tr-gold);color:var(--tr-ink);font-weight:700;font-size:20px;margin-bottom:22px}
+  .hw-card h3{font-size:20px;font-weight:600;margin-bottom:10px;letter-spacing:-0.01em}
+  .hw-card p{font-size:15px;color:var(--tr-gray-60);line-height:1.55}
+  .hw-card .meta{margin-top:18px;font-size:12px;color:var(--tr-gold);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;display:flex;align-items:center;gap:8px}
+  .hw-card .meta::before{content:"";width:18px;height:1px;background:var(--tr-gold)}
+  @media(max-width:900px){.hw-grid{grid-template-columns:1fr}}
+
+  /* POPULAR ROUTES */
+  .routes-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:36px}
+  .routes-head h2{text-align:left}
+  .routes-head .sub{margin-top:10px;color:var(--tr-gray-60);font-size:16px}
+  .arrows{display:flex;gap:10px}
+  .arrow-btn{width:48px;height:48px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;border:1px solid var(--tr-divider);color:var(--tr-ink);box-shadow:var(--sh-soft);transition:transform .15s}
+  .arrow-btn:hover{transform:translateY(-1px)}
+  .routes-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;-webkit-overflow-scrolling:touch}
+  .routes-track::-webkit-scrollbar{display:none}
+  .route-card{flex:0 0 300px;height:400px;border-radius:var(--r-xl);overflow:hidden;position:relative;scroll-snap-align:start;box-shadow:var(--sh-soft)}
+  .route-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .route-card .label{position:absolute;left:14px;right:14px;bottom:14px;background:#fff;border-radius:var(--r-md);padding:18px 22px;font-size:18px;font-weight:600;display:flex;justify-content:space-between;align-items:center;letter-spacing:-0.01em}
+  .route-card .label small{display:block;color:var(--tr-gold);font-size:12px;margin-top:4px;font-weight:600;letter-spacing:0.04em}
+
+  /* WHY US */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:42px}
+  .why-card{background:#fff;border-radius:var(--r-xl);padding:0 28px 30px;overflow:hidden;position:relative;box-shadow:var(--sh-soft)}
+  .why-visual{height:300px;display:flex;align-items:center;justify-content:center;margin:0 -28px;background:var(--tr-cream);position:relative;overflow:hidden}
+  .why-visual img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.7}
+  .why-card h3{font-size:22px;font-weight:600;margin-top:24px;letter-spacing:-0.01em}
+  .why-card p{font-size:15px;color:var(--tr-gray-60);line-height:1.55;margin-top:10px}
+  .visual-payment .card-mock{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:240px;background:#fff;border-radius:var(--r-md);padding:18px;font-size:13px;box-shadow:0 12px 30px rgba(39,60,63,.12)}
+  .visual-payment .row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--tr-divider)}
+  .visual-payment .row:last-of-type{border:none}
+  .visual-payment .row .lbl{color:var(--tr-gray-60)}
+  .visual-payment .row .val{font-weight:600;color:var(--tr-ink)}
+  .visual-payment .pay-btn{margin-top:12px;background:var(--tr-ink);color:#fff;text-align:center;padding:10px;border-radius:var(--r-pill);font-weight:500;font-size:13px}
+  .visual-support .support-avatar{position:absolute;left:50%;top:50%;transform:translate(-50%,-55%);width:170px;height:170px;border-radius:50%;background:#5C5C5C url('https://shipping.trely.io/images/why-choose-us/support-avatar.webp') center/cover}
+  .visual-support .caption{position:absolute;left:50%;bottom:50px;transform:translateX(-50%);background:#fff;border-radius:var(--r-pill);padding:10px 18px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px;white-space:nowrap;box-shadow:var(--sh-soft);color:var(--tr-ink)}
+  .visual-users .ucard{position:absolute;left:50%;background:#fff;border-radius:var(--r-md);padding:14px;box-shadow:var(--sh-medium);width:280px}
+  .visual-users .ucard.u1{top:18%;transform:translateX(-60%)}
+  .visual-users .ucard.u2{bottom:18%;transform:translateX(-40%)}
+  .visual-users .route-mini{display:flex;justify-content:space-between;font-size:11px;color:var(--tr-gray-60);margin-bottom:12px;position:relative;padding:0 8px}
+  .visual-users .route-mini::before{content:"";position:absolute;top:5px;left:12px;right:12px;border-top:1px dashed var(--tr-gold);opacity:.5}
+  .visual-users .ucard .person{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600}
+  .visual-users .ucard .person .av{width:28px;height:28px;border-radius:50%;background:var(--tr-cream);background-size:cover}
+  .visual-users .ucard .person .stars{margin-left:auto;font-size:12px;color:var(--tr-gold);font-weight:600}
+  @media(max-width:900px){.why-grid{grid-template-columns:1fr}}
+
+  /* ALLOWED / FORBIDDEN — оба cream, разница в иконке */
+  .ag-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .ag-card{border-radius:var(--r-xl);padding:36px;background:#fff;box-shadow:var(--sh-soft);position:relative}
+  .ag-card .cat-pill{display:inline-block;background:var(--tr-tag);color:var(--tr-green);font-weight:600;padding:6px 16px;border-radius:var(--r-pill);font-size:13px;margin-bottom:18px;letter-spacing:0.02em}
+  .ag-card.no .cat-pill{background:rgba(198,160,100,.18);color:#8C6F3F}
+  .ag-card h3{font-size:24px;margin-bottom:8px;letter-spacing:-0.01em}
+  .ag-card .sub{color:var(--tr-gray-60);font-size:14px;margin-bottom:24px;line-height:1.5}
+  .ag-card ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;padding:0}
+  .ag-card ul li{font-size:15px;padding:8px 0 8px 30px;position:relative;color:var(--tr-ink)}
+  .ag-card.ok ul li::before{content:"";position:absolute;left:0;top:11px;width:18px;height:18px;border-radius:50%;background:var(--tr-gold);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");background-size:11px;background-repeat:no-repeat;background-position:center}
+  .ag-card.no ul li::before{content:"";position:absolute;left:0;top:11px;width:18px;height:18px;border-radius:50%;background:var(--tr-cream-sub);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238C6F3F' stroke-width='3.5' stroke-linecap='round'><line x1='6' y1='6' x2='18' y2='18'/><line x1='18' y1='6' x2='6' y2='18'/></svg>");background-size:10px;background-repeat:no-repeat;background-position:center}
+  @media(max-width:900px){.ag-grid,.ag-card ul{grid-template-columns:1fr}}
+
+  /* SAFETY */
+  .safety-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:42px}
+  .safety-card{background:#fff;border-radius:var(--r-xl);padding:36px;display:flex;gap:22px;align-items:flex-start;box-shadow:var(--sh-soft)}
+  .safety-card .ico{width:56px;height:56px;border-radius:var(--r-md);background:var(--tr-cream);color:var(--tr-gold);display:flex;align-items:center;justify-content:center;flex:0 0 56px}
+  .safety-card h3{font-size:20px;font-weight:600;margin-bottom:10px;letter-spacing:-0.01em}
+  .safety-card p{font-size:15px;color:var(--tr-gray-60);line-height:1.55}
+  @media(max-width:900px){.safety-grid{grid-template-columns:1fr}}
+
+  /* BIG STATS — deep green */
+  .big-stats{background:var(--tr-green);color:#fff;padding:96px 0;border-radius:var(--r-xl);position:relative;overflow:hidden}
+  .big-stats::before,.big-stats::after{content:"";position:absolute;border-radius:50%;background:rgba(198,160,100,.06)}
+  .big-stats::before{top:-200px;left:-150px;width:500px;height:500px}
+  .big-stats::after{bottom:-200px;right:-150px;width:500px;height:500px}
+  .big-stats .container{position:relative;z-index:1}
+  .big-stats .head{text-align:center;margin-bottom:60px}
+  .big-stats .eyebrow{color:var(--tr-gold)}
+  .big-stats h2{color:#fff}
+  .big-stats .row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .big-stats .stat{text-align:center;padding:0 16px}
+  .big-stats .stat .num{font-size:72px;font-weight:700;line-height:1;letter-spacing:-0.03em;color:var(--tr-gold)}
+  .big-stats .stat .lbl{margin-top:16px;font-size:15px;color:rgba(255,255,255,.7);line-height:1.5}
+  @media(max-width:900px){.big-stats .row{grid-template-columns:1fr 1fr;gap:48px 16px}.big-stats .stat .num{font-size:48px}}
+
+  /* CASES */
+  .cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .case-card{background:#fff;border-radius:var(--r-xl);padding:28px;display:flex;flex-direction:column;gap:18px;box-shadow:var(--sh-soft)}
+  .case-card .route{display:flex;justify-content:space-between;align-items:center;background:var(--tr-cream);border-radius:var(--r-md);padding:14px 18px;font-size:13px;font-weight:600}
+  .case-card .route .city{display:flex;flex-direction:column}
+  .case-card .route .city small{color:var(--tr-gray-60);font-size:11px;font-weight:500;margin-top:3px;letter-spacing:0.02em}
+  .case-card .route .arr{color:var(--tr-gold);font-size:18px;font-weight:700}
+  .case-card .item{font-size:17px;font-weight:600;letter-spacing:-0.01em}
+  .case-card .item small{display:block;color:var(--tr-gray-60);font-weight:500;font-size:13px;margin-top:4px}
+  .case-card .stats{display:flex;gap:20px;border-top:1px solid var(--tr-divider);padding-top:18px}
+  .case-card .stats .s{display:flex;flex-direction:column;flex:1}
+  .case-card .stats .s .v{font-size:20px;font-weight:700;color:var(--tr-gold);letter-spacing:-0.01em}
+  .case-card .stats .s .l{font-size:11px;color:var(--tr-gray-60);margin-top:4px;letter-spacing:0.04em;text-transform:uppercase;font-weight:500}
+  @media(max-width:900px){.cases-grid{grid-template-columns:1fr}}
+
+  /* TESTIMONIALS — deep green */
+  .testimonials{background:var(--tr-green);color:#fff;padding:96px 0;border-radius:var(--r-xl)}
+  .testimonials .container{max-width:1280px}
+  .testimonials .head{text-align:center;margin-bottom:54px}
+  .testimonials .eyebrow{color:var(--tr-gold)}
+  .testimonials h2{color:#fff}
+  .testimonials .sub{color:rgba(255,255,255,.65);max-width:520px;margin:16px auto 0;font-size:16px;line-height:1.55}
+  .t-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 64px 14px;margin:0 -64px}
+  .t-track::-webkit-scrollbar{display:none}
+  .t-card{flex:0 0 720px;background:var(--tr-green-card);border-radius:var(--r-xl);padding:32px;display:grid;grid-template-columns:240px 1fr;gap:32px;scroll-snap-align:center;color:#fff}
+  .t-card .ph{border-radius:var(--r-md);overflow:hidden;height:280px;background:#444}
+  .t-card .ph img{width:100%;height:100%;object-fit:cover}
+  .t-card .stars{color:var(--tr-gold);font-size:15px;letter-spacing:3px;margin-bottom:18px}
+  .t-card blockquote{font-size:17px;line-height:1.55;color:rgba(255,255,255,.92);font-weight:400}
+  .t-card .who{margin-top:24px;font-size:14px;color:var(--tr-gold);font-weight:600}
+  .t-card .who small{display:block;color:rgba(255,255,255,.55);font-weight:500;margin-top:3px}
+  .t-nav{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:40px}
+  .t-nav .arrow-btn{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.12);box-shadow:none}
+  .t-nav .dots{display:flex;gap:6px}
+  .t-nav .dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.25)}
+  .t-nav .dot.active{width:32px;border-radius:3px;background:var(--tr-gold)}
+  @media(max-width:900px){.t-card{grid-template-columns:1fr;flex:0 0 86vw;padding:24px}.t-card .ph{height:200px}.t-track{padding:0 24px 14px;margin:0 -24px}}
+
+  /* FOR TRAVELERS — deep green с gold акцентами + иллюстрация */
+  .traveler{background:var(--tr-green);border-radius:var(--r-xl);padding:72px 64px;color:var(--tr-cream);display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;position:relative;overflow:hidden}
+  .traveler::before{content:"";position:absolute;top:-150px;right:-100px;width:520px;height:520px;border-radius:50%;background:rgba(198,160,100,.08)}
+  .traveler::after{content:"";position:absolute;bottom:-200px;left:-150px;width:400px;height:400px;border-radius:50%;background:rgba(198,160,100,.05)}
+  .traveler > *{position:relative;z-index:1}
+  .traveler .pill{background:rgba(198,160,100,.18);color:var(--tr-gold)}
+  .traveler .pill .dot{background:var(--tr-gold)}
+  .traveler h2{color:#fff;margin:18px 0}
+  .traveler h2 .gold{color:var(--tr-gold)}
+  .traveler p.lead{font-size:17px;line-height:1.6;color:rgba(255,255,255,.75);max-width:480px}
+  .traveler .cta-row{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+  .traveler-right{position:relative}
+  .traveler-illust{position:absolute;right:-40px;top:50%;transform:translateY(-50%);width:340px;height:auto;z-index:2}
+  .traveler .perks{display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative;z-index:1}
+  .traveler .perk{background:rgba(255,255,255,.05);border:1px solid rgba(198,160,100,.18);border-radius:var(--r-md);padding:20px}
+  .traveler .perk .v{font-size:32px;font-weight:700;line-height:1;color:var(--tr-gold);letter-spacing:-0.02em}
+  .traveler .perk .l{font-size:13px;margin-top:10px;color:rgba(255,255,255,.65);line-height:1.4}
+  @media(max-width:900px){.traveler{grid-template-columns:1fr;padding:40px 28px}.traveler-illust{display:none}}
+
+  /* PRESS LOGOS */
+  .press{padding:60px 0}
+  .press .label{text-align:center;font-size:13px;color:var(--tr-gray-60);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:36px;font-weight:600}
+  .press .logos{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:30px;opacity:.6}
+  .press .logos span{font-size:22px;font-weight:700;color:var(--tr-ink);letter-spacing:-0.01em;font-style:italic}
+
+  /* APP DOWNLOAD */
+  .app{background:#fff;border-radius:var(--r-xl);padding:72px 64px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;overflow:hidden;box-shadow:var(--sh-soft)}
+  .app::before{content:"";position:absolute;top:-200px;left:-150px;width:480px;height:480px;border-radius:50%;background:var(--tr-cream-sub);opacity:.5;z-index:0}
+  .app > *{position:relative;z-index:1}
+  .app h2{margin:14px 0 18px}
+  .app p{font-size:17px;line-height:1.55;color:var(--tr-gray-60);max-width:440px}
+  .app .stores{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+  .store-btn{background:var(--tr-ink);color:#fff;border-radius:var(--r-md);padding:12px 22px;display:flex;align-items:center;gap:12px;font-size:14px}
+  .store-btn small{display:block;font-size:11px;opacity:.8;font-weight:400}
+  .store-btn b{display:block;font-size:16px;font-weight:600;line-height:1.1}
+  .app-mock{display:flex;justify-content:center;align-items:center;height:380px;position:relative}
+  .app-mascot{position:absolute;width:280px;height:auto;left:0;top:50%;transform:translateY(-50%);z-index:1}
+  .app-mock .phone{width:220px;height:380px;background:#fff;border-radius:32px;border:8px solid var(--tr-ink);box-shadow:0 30px 60px rgba(39,60,63,.18);padding:24px 16px;font-size:11px;position:relative;transform:rotate(-4deg);z-index:2;margin-left:120px}
+  .app-mock .phone .notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:60px;height:14px;background:var(--tr-ink);border-radius:8px}
+  .app-mock .phone h4{font-size:13px;margin:28px 0 12px;font-weight:600;letter-spacing:-0.01em}
+  .app-mock .phone .mini{background:var(--tr-cream);border-radius:var(--r-md);padding:10px 12px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:500}
+  .app-mock .phone .mini .price{color:var(--tr-gold);font-weight:700}
+  @media(max-width:900px){.app{grid-template-columns:1fr;padding:40px 28px}.app-mock{order:-1;height:320px}.app-mascot{display:none}.app-mock .phone{margin-left:0}}
+
+  /* FINAL CTA */
+  .final-cta{text-align:center;padding:120px 0 100px;position:relative;overflow:hidden}
+  .final-cta::before{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:900px;height:900px;border-radius:50%;background:var(--tr-cream-sub);opacity:.4;z-index:0}
+  .final-cta .container{position:relative;z-index:1}
+  .final-cta h2{max-width:840px;margin:18px auto 20px}
+  .final-cta p{font-size:18px;color:var(--tr-gray-60);max-width:540px;margin:0 auto 40px;line-height:1.55}
+  .final-cta .cta-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .final-cta .btn-primary{height:56px;padding:0 36px;font-size:16px}
+  .final-cta .btn-secondary{height:56px;padding:0 32px;font-size:16px}
+
+  /* FAQ */
+  .faq-list{max-width:880px;margin:0 auto}
+  .faq-item{border-bottom:1px solid var(--tr-divider);padding:26px 4px;cursor:pointer}
+  .faq-item:last-child{border-bottom:none}
+  .faq-item .row{display:flex;align-items:center;justify-content:space-between;gap:18px}
+  .faq-item .q{font-size:18px;font-weight:600;letter-spacing:-0.01em}
+  .faq-plus{width:40px;height:40px;border-radius:50%;background:var(--tr-cream);color:var(--tr-gold);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:400;flex:0 0 40px;transition:transform .2s}
+  .faq-item:hover .faq-plus{transform:rotate(90deg);background:var(--tr-tag)}
+
+  /* FOOTER */
+  footer{background:var(--tr-cream);padding:80px 0 28px}
+  .footer-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr 1fr;gap:48px;padding-bottom:56px}
+  .footer-grid .brand .logo{font-size:24px;margin-bottom:18px}
+  .footer-grid .brand p{max-width:320px;color:var(--tr-gray-60);font-size:15px;line-height:1.55;margin-bottom:24px}
+  .footer-grid .socials{display:flex;gap:10px}
+  .footer-grid .col h4{font-size:12px;text-transform:uppercase;letter-spacing:0.14em;color:var(--tr-ink);margin-bottom:20px;font-weight:700}
+  .footer-grid .col ul{list-style:none;display:flex;flex-direction:column;gap:12px;padding:0}
+  .footer-grid .col a{font-size:15px;color:var(--tr-gray-60)}
+  .footer-grid .col a:hover{color:var(--tr-gold)}
+  .footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px;font-size:13px;color:var(--tr-gray-60);border-top:1px solid var(--tr-divider);padding-top:28px}
+  .footer-bottom .legal{display:flex;gap:24px}
+  .footer-bottom .legal a{color:var(--tr-gray-60)}
+  .soc{width:36px;height:36px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--tr-gold);box-shadow:var(--sh-soft)}
+  @media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:32px}}
+
+  /* responsive */
+  @media(max-width:900px){
+    .search-card{grid-template-columns:1fr;gap:6px}
+    .swap-btn{display:none}
+    .section{padding:64px 0}
+    .compare-wrap{overflow-x:auto}
+    .compare{min-width:680px}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="container nav">
+    <div class="logo">Trely</div>
+    <nav class="nav-links">
+      <a href="#" class="muted-gold">Отправить посылку <span class="plus">+</span></a>
+      <a href="#" class="muted-gold">Стать доставщиком <span class="plus">+</span></a>
+      <a href="#">Объявления</a>
+      <a href="#">Отклики</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang-pill"><span class="flag"></span>RU <span style="opacity:.5">▾</span></div>
+      <div class="profile-pill">Профиль <span class="avatar">●</span><span style="opacity:.5">▾</span></div>
+      <button class="chat-btn" aria-label="Чат">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span class="badge">2</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-inner">
+    <h1>Надёжная доставка<br/>руками реальных людей</h1>
+    <p class="lead">Зачем ждать и переплачивать? Найдите человека, который уже летит в нужный город — и доверьте ему доставку.</p>
+
+    <div class="hero-stats">
+      <div class="stat"><div class="num">700<small>+</small></div><div class="lbl">направлений по миру</div></div>
+      <div class="stat"><div class="num">12 500<small>+</small></div><div class="lbl">проверенных пользователей</div></div>
+      <div class="stat"><div class="num">от 2<small> дн.</small></div><div class="lbl">средний срок доставки</div></div>
+      <div class="stat"><div class="num">−64<small>%</small></div><div class="lbl">экономия vs курьеры</div></div>
+    </div>
+
+    <div class="search-card">
+      <div class="search-field"><input type="text" placeholder="Откуда" /></div>
+      <button class="swap-btn" aria-label="Поменять местами">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16V4M7 4 3 8M7 4l4 4M17 8v12m0 0 4-4m-4 4-4-4"/></svg>
+      </button>
+      <div class="search-field"><input type="text" placeholder="Куда" /></div>
+      <div class="search-field date-field">
+        <input type="text" placeholder="Дата поездки" />
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A0A4A6" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      </div>
+      <button class="btn-primary">Найти</button>
+    </div>
+  </div>
+  <div class="hero-illustration">
+    <img src="assets/img/hero-imgx2-new.webp" alt="" />
+  </div>
+</section>
+
+<!-- TRUST STRIP — deep green -->
+<section class="trust-strip">
+  <div class="container">
+    <div class="row">
+      <div class="trust-item">
+        <span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><circle cx="8" cy="14.5" r="1.2" fill="currentColor"/></svg></span>
+        <div><b>Эскроу-платёж</b><span>Деньги блокируются до получения</span></div>
+      </div>
+      <div class="trust-item">
+        <span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <div><b>Верификация ID</b><span>Паспорт и селфи каждого</span></div>
+      </div>
+      <div class="trust-item">
+        <span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.5 8.5 0 0 1 15.1-3.8z"/></svg></span>
+        <div><b>Поддержка 24/7</b><span>Чат и звонок в любое время</span></div>
+      </div>
+      <div class="trust-item">
+        <span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7 9 18l-5-5"/></svg></span>
+        <div><b>Страхование посылок</b><span>До $1 000 за каждую сделку</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="section">
+  <div class="container">
+    <div class="calc">
+      <div class="text">
+        <span class="eyebrow">Прозрачная цена</span>
+        <h2>Узнайте стоимость<br/>за <span class="gold">30 секунд</span></h2>
+        <p>Trely автоматически учитывает вес, маршрут, срочность и сборы. Никаких скрытых комиссий — итог виден до того, как вы создадите заявку.</p>
+        <ul class="bullets">
+          <li>Сравнение со средней ценой курьерских служб по маршруту</li>
+          <li>Учёт таможенных сборов и налогов автоматически</li>
+          <li>Возможность торговаться с путешественником в чате</li>
+          <li>Оплата только после подтверждения получения</li>
+        </ul>
+      </div>
+      <div class="calc-widget">
+        <h3>Расчёт стоимости</h3>
+        <div class="calc-row">
+          <div class="calc-field"><div class="lbl">Откуда</div><div class="val">Москва, Россия</div></div>
+          <div class="calc-field"><div class="lbl">Куда</div><div class="val">Бали, Индонезия</div></div>
+        </div>
+        <div class="calc-row">
+          <div class="calc-field"><div class="lbl">Вес посылки</div><div class="val">До 5 кг</div></div>
+          <div class="calc-field"><div class="lbl">Срочность</div><div class="val">Стандарт · 5–7 дн.</div></div>
+        </div>
+        <div class="calc-result">
+          <div><div class="lbl">Ориентировочная стоимость</div><div class="price">$45 <small>– $60</small></div></div>
+          <div class="delta">−62% к DHL</div>
+        </div>
+        <button class="btn-primary" style="width:100%;margin-top:22px">Подобрать путешественника</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="section" style="padding-top:30px">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Сравнение</span>
+      <h2>Trely vs привычные способы доставки</h2>
+      <p>Цены и сроки на международной отправке посылки до 5 кг между странами СНГ и популярными направлениями.</p>
+    </div>
+    <div class="compare-wrap">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="col-trely">Trely</th>
+            <th>DHL / FedEx</th>
+            <th>Почта России</th>
+            <th>Карго / попутка</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Средняя стоимость, 5 кг</td>
+            <td class="col-trely"><b>$45–60</b></td>
+            <td>$140–180</td>
+            <td>$60–90</td>
+            <td>$50–80</td>
+          </tr>
+          <tr>
+            <td>Сроки доставки</td>
+            <td class="col-trely"><b>2–7 дней</b></td>
+            <td>3–5 дней</td>
+            <td>14–30 дней</td>
+            <td>5–14 дней</td>
+          </tr>
+          <tr>
+            <td>Гибкие маршруты (любой город)</td>
+            <td class="col-trely"><span class="check">✓</span></td>
+            <td><span class="partial">только крупные</span></td>
+            <td><span class="partial">не везде</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Эскроу-платёж</td>
+            <td class="col-trely"><span class="check">✓</span></td>
+            <td><span class="cross">✕</span></td>
+            <td><span class="cross">✕</span></td>
+            <td><span class="cross">✕</span></td>
+          </tr>
+          <tr>
+            <td>Личная встреча и передача из рук в руки</td>
+            <td class="col-trely"><span class="check">✓</span></td>
+            <td><span class="cross">✕</span></td>
+            <td><span class="cross">✕</span></td>
+            <td><span class="partial">не всегда</span></td>
+          </tr>
+          <tr>
+            <td>Страховка посылки</td>
+            <td class="col-trely"><span class="check">✓ до $1 000</span></td>
+            <td><span class="check">✓ доплата</span></td>
+            <td><span class="partial">ограничено</span></td>
+            <td><span class="cross">✕</span></td>
+          </tr>
+          <tr>
+            <td>Поддержка на русском 24/7</td>
+            <td class="col-trely"><span class="check">✓</span></td>
+            <td><span class="partial">в офисе</span></td>
+            <td><span class="partial">ограничено</span></td>
+            <td><span class="cross">✕</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS detailed — Trely gold steps -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Процесс</span>
+      <h2>Как это работает</h2>
+      <p>От размещения заявки до получения посылки — обычно <span class="gold">2–7 дней</span>. Без бумаг, очередей и поездок в офис.</p>
+    </div>
+    <div class="hw-grid">
+      <div class="hw-card">
+        <div class="hw-num">1</div>
+        <h3>Разместите заявку</h3>
+        <p>Укажите маршрут, дату, вес и описание посылки. Trely сам подскажет ориентировочную цену и сроки.</p>
+        <div class="meta">≈ 3 минуты</div>
+      </div>
+      <div class="hw-card">
+        <div class="hw-num">2</div>
+        <h3>Получите отклики</h3>
+        <p>Путешественники, которые уже летят по вашему маршруту, откликаются и предлагают свои условия.</p>
+        <div class="meta">Обычно в течение часа</div>
+      </div>
+      <div class="hw-card">
+        <div class="hw-num">3</div>
+        <h3>Договоритесь в чате</h3>
+        <p>Обсудите цену, формат передачи, упаковку. Посмотрите профиль, рейтинг и отзывы путешественника.</p>
+        <div class="meta">Безопасный встроенный чат</div>
+      </div>
+      <div class="hw-card">
+        <div class="hw-num">4</div>
+        <h3>Оплатите через эскроу</h3>
+        <p>Деньги блокируются на счёте Trely. Путешественник получает их только после подтверждения доставки.</p>
+        <div class="meta">Карты, СБП, USDT</div>
+      </div>
+      <div class="hw-card">
+        <div class="hw-num">5</div>
+        <h3>Передайте посылку</h3>
+        <p>Встретьтесь в удобной точке: дома, в кафе, в аэропорту. Сфотографируйте упаковку и стартуйте отслеживание.</p>
+        <div class="meta">Личная встреча</div>
+      </div>
+      <div class="hw-card">
+        <div class="hw-num">6</div>
+        <h3>Получатель подтверждает</h3>
+        <p>Адресат получает посылку, подтверждает в приложении, ставит оценку. Деньги уходят путешественнику.</p>
+        <div class="meta">Закрытие сделки</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POPULAR ROUTES -->
+<section class="section" style="padding-top:30px">
+  <div class="container">
+    <div class="routes-head">
+      <div>
+        <span class="eyebrow">Направления</span>
+        <h2>Популярные маршруты</h2>
+        <div class="sub">В этих городах больше всего заказов и активных путешественников</div>
+      </div>
+      <div class="arrows">
+        <button class="arrow-btn">←</button>
+        <button class="arrow-btn">→</button>
+      </div>
+    </div>
+    <div class="routes-track">
+      <div class="route-card"><img src="https://shipping.trely.io/images/popular-routes/bali.webp" alt=""><div class="label"><div>Бали (Денпасар)<small>134 активных заявки</small></div></div></div>
+      <div class="route-card"><img src="https://shipping.trely.io/images/popular-routes/thailand.webp" alt=""><div class="label"><div>Тайланд<small>97 активных заявок</small></div></div></div>
+      <div class="route-card"><img src="https://shipping.trely.io/images/popular-routes/paris.webp" alt=""><div class="label"><div>Париж<small>82 активные заявки</small></div></div></div>
+      <div class="route-card"><img src="https://shipping.trely.io/images/popular-routes/cape-town.webp" alt=""><div class="label"><div>Кейп-Таун<small>41 активная заявка</small></div></div></div>
+      <div class="route-card"><img src="https://shipping.trely.io/images/popular-routes/sao-paulo.webp" alt=""><div class="label"><div>Сан-Паулу<small>36 активных заявок</small></div></div></div>
+      <div class="route-card"><img src="https://shipping.trely.io/images/popular-routes/berlin.webp" alt=""><div class="label"><div>Берлин<small>119 активных заявок</small></div></div></div>
+      <div class="route-card"><img src="https://shipping.trely.io/images/popular-routes/moscow.webp" alt=""><div class="label"><div>Москва<small>248 активных заявок</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Преимущества</span><h2>Почему нас выбирают?</h2></div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-visual visual-payment">
+          <img class="bg" src="https://shipping.trely.io/images/why-choose-us/payment-bg.svg" alt="">
+          <div class="card-mock">
+            <div class="row"><span class="lbl">Вес</span><span class="val">До 12 кг</span></div>
+            <div class="row"><span class="lbl">Доставить до</span><span class="val">31.08.2025</span></div>
+            <div class="row"><span class="lbl">Награда</span><span class="val">$20</span></div>
+            <div class="pay-btn">Оплатить</div>
+          </div>
+        </div>
+        <h3>Полная ясность в платежах</h3>
+        <p>Trely автоматически вычисляет налоги и дополнительные затраты. Вы заранее узнаёте точную сумму платежа перед оформлением заказа.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-visual visual-support">
+          <img class="bg" src="https://shipping.trely.io/images/why-choose-us/support-bg.svg" alt="">
+          <div class="support-avatar"></div>
+          <div class="caption">Пишите — мы на связи 24/7</div>
+        </div>
+        <h3>Круглосуточная поддержка</h3>
+        <p>Наши опытные специалисты всегда на связи — помогут с оформлением заказа, доставкой и ответят на любые вопросы.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-visual visual-users">
+          <img class="bg" src="https://shipping.trely.io/images/why-choose-us/users-bg.svg" alt="">
+          <div class="ucard u1">
+            <div class="route-mini"><span>Бали, Индонезия<br/><span style="color:var(--tr-gray-40)">08.08, 17:40</span></span><span>Казань, Россия<br/><span style="color:var(--tr-gray-40)">08.08, 21:40</span></span></div>
+            <div class="person"><span class="av" style="background-image:url(https://shipping.trely.io/images/why-choose-us/user-1.webp)"></span>Артем <span class="stars">★ 4.8</span></div>
+          </div>
+          <div class="ucard u2">
+            <div class="route-mini"><span>Минск, Беларусь<br/><span style="color:var(--tr-gray-40)">10.11, 12:10</span></span><span>Москва, Россия<br/><span style="color:var(--tr-gray-40)">10.11, 14:10</span></span></div>
+            <div class="person"><span class="av" style="background-image:url(https://shipping.trely.io/images/why-choose-us/user-2.webp)"></span>Виолетта <span class="stars">★ 5.0</span></div>
+          </div>
+        </div>
+        <h3>Проверенные пользователи</h3>
+        <p>Доверие — основа Trely. Мы тщательно отбираем путешественников и покупателей, чтобы гарантировать честные сделки.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ALLOWED / FORBIDDEN — Trely cream/gold -->
+<section class="section" style="padding-top:30px">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Правила</span>
+      <h2>Что можно и нельзя передавать</h2>
+      <p>Чтобы избежать задержек на таможне и проблем у путешественника, мы заранее проговариваем правила.</p>
+    </div>
+    <div class="ag-grid">
+      <div class="ag-card ok">
+        <span class="cat-pill">Можно отправлять</span>
+        <h3>Разрешённые категории</h3>
+        <div class="sub">Безопасные товары для перевозки в ручной клади и багаже</div>
+        <ul>
+          <li>Документы и письма</li>
+          <li>Одежда и обувь</li>
+          <li>Косметика и парфюмерия</li>
+          <li>Электроника (новая, в упаковке)</li>
+          <li>Книги и канцелярия</li>
+          <li>Подарки и сувениры</li>
+          <li>Детские товары и игрушки</li>
+          <li>Витамины и БАДы</li>
+        </ul>
+      </div>
+      <div class="ag-card no">
+        <span class="cat-pill">Запрещено</span>
+        <h3>Не принимаем к перевозке</h3>
+        <div class="sub">Эти категории не пройдут таможню и нарушают правила платформы</div>
+        <ul>
+          <li>Наличные и ценные бумаги</li>
+          <li>Оружие и боеприпасы</li>
+          <li>Наркотики и психотропы</li>
+          <li>Лекарства по рецепту</li>
+          <li>Скоропортящиеся продукты</li>
+          <li>Жидкости свыше нормы</li>
+          <li>Живые животные и растения</li>
+          <li>Хрупкие незастрахованные товары</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAFETY -->
+<section class="section" style="padding-top:30px">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Безопасность</span><h2>Как мы защищаем каждую сделку</h2><p>Trely — не просто доска объявлений. Мы выстроили систему защиты на каждом шаге, как у банков и маркетплейсов.</p></div>
+    <div class="safety-grid">
+      <div class="safety-card">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/></svg></span>
+        <div><h3>Верификация ID и селфи</h3><p>Каждый пользователь проходит проверку паспорта и подтверждение лица. Анонимных профилей у нас нет.</p></div>
+      </div>
+      <div class="safety-card">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/></svg></span>
+        <div><h3>Эскроу-платёж</h3><p>Деньги отправителя удерживаются Trely и переводятся путешественнику только после подтверждения доставки.</p></div>
+      </div>
+      <div class="safety-card">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"/></svg></span>
+        <div><h3>Рейтинги и отзывы</h3><p>После каждой сделки обе стороны оставляют оценку. Профиль с низким рейтингом теряет доступ к заявкам.</p></div>
+      </div>
+      <div class="safety-card">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg></span>
+        <div><h3>Tracking и фотофиксация</h3><p>Каждый этап — фото упаковки, передача, получение — фиксируется в приложении. Никаких потерь без следов.</p></div>
+      </div>
+      <div class="safety-card">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <div><h3>Страхование до $1 000</h3><p>Trely страхует каждую сделку. В спорной ситуации компенсируем стоимость посылки в течение 7 дней.</p></div>
+      </div>
+      <div class="safety-card">
+        <span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.5 8.5 0 0 1 15.1-3.8z"/></svg></span>
+        <div><h3>Поддержка-арбитр</h3><p>Если возникает спор, к делу подключается специалист Trely. Решение принимается на основе фактов и переписки.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIG STATS — deep green -->
+<section style="padding:30px 0">
+  <div class="container" style="padding:0">
+    <div class="big-stats">
+      <div class="container">
+        <div class="head">
+          <span class="eyebrow">Trely в цифрах</span>
+          <h2>Сообщество, которому уже доверяют</h2>
+        </div>
+        <div class="row">
+          <div class="stat"><div class="num">182К</div><div class="lbl">успешно доставленных<br/>посылок</div></div>
+          <div class="stat"><div class="num">4.9 ★</div><div class="lbl">средняя оценка<br/>пользователей</div></div>
+          <div class="stat"><div class="num">93</div><div class="lbl">страны<br/>покрытия</div></div>
+          <div class="stat"><div class="num">3.8 дн.</div><div class="lbl">средняя скорость<br/>доставки</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="section">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Истории</span><h2>Кейсы наших пользователей</h2><p>Реальные сделки за последний месяц — маршрут, посылка, срок и сколько удалось сэкономить относительно курьерской службы.</p></div>
+    <div class="cases-grid">
+      <div class="case-card">
+        <div class="route">
+          <div class="city">Москва<small>20 апр, 14:00</small></div>
+          <div class="arr">→</div>
+          <div class="city">Бали<small>23 апр, 10:30</small></div>
+        </div>
+        <div class="item">Документы и подарок<small>2.4 кг · конверт + коробка</small></div>
+        <div class="stats">
+          <div class="s"><span class="v">3 дня</span><span class="l">срок</span></div>
+          <div class="s"><span class="v">−$92</span><span class="l">vs DHL</span></div>
+          <div class="s"><span class="v">5.0 ★</span><span class="l">оценка</span></div>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="route">
+          <div class="city">Стамбул<small>02 мая, 09:00</small></div>
+          <div class="arr">→</div>
+          <div class="city">Минск<small>04 мая, 18:40</small></div>
+        </div>
+        <div class="item">Ноутбук в подарок<small>3.1 кг · оригинальная коробка</small></div>
+        <div class="stats">
+          <div class="s"><span class="v">2 дня</span><span class="l">срок</span></div>
+          <div class="s"><span class="v">−$130</span><span class="l">vs FedEx</span></div>
+          <div class="s"><span class="v">5.0 ★</span><span class="l">оценка</span></div>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="route">
+          <div class="city">Дубай<small>14 апр, 21:10</small></div>
+          <div class="arr">→</div>
+          <div class="city">Тбилиси<small>15 апр, 02:30</small></div>
+        </div>
+        <div class="item">Косметика и витамины<small>1.8 кг · 12 позиций</small></div>
+        <div class="stats">
+          <div class="s"><span class="v">1 день</span><span class="l">срок</span></div>
+          <div class="s"><span class="v">−$74</span><span class="l">vs Почта</span></div>
+          <div class="s"><span class="v">5.0 ★</span><span class="l">оценка</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <div class="head">
+      <span class="eyebrow">Отзывы</span>
+      <h2>Что говорят наши клиенты</h2>
+      <p class="sub">12 500+ пользователей уже доверились Trely — вот что они пишут после своих сделок</p>
+    </div>
+    <div class="t-track">
+      <div class="t-card">
+        <div class="ph"><img src="https://shipping.trely.io/images/testimonials/1.webp" alt=""></div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <blockquote>Отличное решение для тех, кто ценит время. Отправляла важные документы в Германию — курьерские службы просили космические деньги и неделю ожидания. Через Trely нашла попутчика за день, и уже через три дня всё было на месте. Приятно удивила простота сервиса и отзывчивость людей.</blockquote>
+          <div class="who">Анна<small>Москва · отправка в Берлин</small></div>
+        </div>
+      </div>
+      <div class="t-card">
+        <div class="ph"><img src="https://shipping.trely.io/images/testimonials/2.webp" alt=""></div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <blockquote>Отправляла подарки родным в Беларусь несколько раз через Trely. Каждый раз всё проходило идеально: находила попутчика за пару дней, договаривались о встрече, и посылка доходила быстрее любой почты. Особенно радует, что можно лично пообщаться с человеком и убедиться в надёжности.</blockquote>
+          <div class="who">Алина<small>Варшава · отправка в Минск</small></div>
+        </div>
+      </div>
+      <div class="t-card">
+        <div class="ph"><img src="https://shipping.trely.io/images/testimonials/3.webp" alt=""></div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <blockquote>Очень классный сервис. Нужно было срочно передать документы в Польшу — обычная доставка занимала бы неделю. Нашёл путешественника, который ехал туда через два дня, и всё передал лично. Получатель получил документы на следующий день. Удобно, быстро и без лишних вопросов.</blockquote>
+          <div class="who">Вадим<small>Минск · отправка в Варшаву</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="t-nav">
+      <button class="arrow-btn">←</button>
+      <div class="dots"><span class="dot"></span><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <button class="arrow-btn">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- TRAVELERS CTA — deep green + иллюстрация -->
+<section class="section">
+  <div class="container">
+    <div class="traveler">
+      <div>
+        <span class="pill"><span class="dot"></span>Для путешественников</span>
+        <h2>Окупите перелёт<br/><span class="gold">свободным местом</span> в багаже</h2>
+        <p class="lead">Если вы летите — заберите чью-то посылку. В среднем путешественник зарабатывает $80–250 за один рейс. Деньги поступают на ваш счёт сразу после доставки.</p>
+        <div class="cta-row">
+          <button class="btn-gold">Стать путешественником</button>
+          <button class="btn-ghost-dark">Узнать подробнее</button>
+        </div>
+      </div>
+      <div class="traveler-right">
+        <img class="traveler-illust" src="assets/illustrations/characters/06-travelclub-boy-bali.png" alt="" />
+        <div class="perks">
+          <div class="perk"><div class="v">$80–250</div><div class="l">средний заработок<br/>за один рейс</div></div>
+          <div class="perk"><div class="v">~15 мин</div><div class="l">занимает<br/>передача</div></div>
+          <div class="perk"><div class="v">0 ₽</div><div class="l">комиссия<br/>за регистрацию</div></div>
+          <div class="perk"><div class="v">24 ч</div><div class="l">выплата<br/>после доставки</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESS -->
+<section class="press">
+  <div class="container">
+    <div class="label">О нас писали</div>
+    <div class="logos">
+      <span>Forbes</span>
+      <span>РБК</span>
+      <span>vc.ru</span>
+      <span>Sostav</span>
+      <span>The Bell</span>
+      <span>Inc. Russia</span>
+      <span>TJournal</span>
+    </div>
+  </div>
+</section>
+
+<!-- APP DOWNLOAD -->
+<section class="section" style="padding-top:30px">
+  <div class="container">
+    <div class="app">
+      <div>
+        <span class="eyebrow">Мобильное приложение</span>
+        <h2>Носите Trely<br/><span class="gold">в кармане</span></h2>
+        <p>Push-уведомления о новых откликах, чат с путешественником, оплата в одно нажатие и трекинг посылки в реальном времени.</p>
+        <div class="stores">
+          <a href="#" class="store-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.29c-.03-3.07 2.51-4.55 2.62-4.62-1.43-2.09-3.65-2.38-4.44-2.41-1.89-.19-3.69 1.12-4.65 1.12-.97 0-2.44-1.09-4.02-1.06-2.07.03-3.98 1.2-5.04 3.05-2.15 3.73-.55 9.25 1.55 12.28 1.03 1.48 2.25 3.15 3.85 3.09 1.55-.06 2.13-1 4-1 1.86 0 2.39 1 4.02.97 1.66-.03 2.71-1.51 3.72-3 .79-1.16 1.43-2.37 1.84-3.74-3.27-1.24-3.45-4.54-3.45-4.68zM14.2 4.18c.85-1.03 1.42-2.46 1.27-3.88-1.22.05-2.7.81-3.58 1.83-.78.9-1.47 2.34-1.29 3.74 1.36.1 2.75-.69 3.6-1.69z"/></svg>
+            <div><small>Загрузите в</small><b>App Store</b></div>
+          </a>
+          <a href="#" class="store-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 1.55C3.22 1.95 3 2.55 3 3.32v17.36c0 .77.22 1.37.6 1.77l.05.05L13.4 13l.05-.05-9.8-11.4zM17 9.4 13.45 13 17 16.6l4.05-2.3c1.16-.66 1.16-1.74 0-2.4L17 9.4zM4.4 22.4l9.45-9.45-3.55-3.55L4.45 1.6c.15.06.31.14.46.23L19.1 10.2c1.16.66 1.16 1.74 0 2.4L4.9 22.18a1.8 1.8 0 0 1-.5.22z"/></svg>
+            <div><small>Доступно в</small><b>Google Play</b></div>
+          </a>
+        </div>
+      </div>
+      <div class="app-mock">
+        <img class="app-mascot" src="assets/illustrations/characters/02-mascot-main-green.png" alt="" />
+        <div class="phone">
+          <span class="notch"></span>
+          <h4 style="margin-top:30px">Активные заявки</h4>
+          <div class="mini"><span>Москва → Бали</span><span class="price">$45</span></div>
+          <div class="mini"><span>Стамбул → Минск</span><span class="price">$60</span></div>
+          <div class="mini"><span>Дубай → Тбилиси</span><span class="price">$30</span></div>
+          <h4>Чаты</h4>
+          <div class="mini"><span>Артем</span><span style="color:var(--tr-gold);background:rgba(198,160,100,.15);padding:2px 8px;border-radius:999px;font-size:10px">2</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Вопросы</span><h2>Часто задаваемые вопросы</h2></div>
+    <div class="faq-list">
+      <div class="faq-item"><div class="row"><span class="q">Кому я передаю свою посылку? Это безопасно?</span><span class="faq-plus">+</span></div></div>
+      <div class="faq-item"><div class="row"><span class="q">Какие вещи можно передавать, а какие — нет?</span><span class="faq-plus">+</span></div></div>
+      <div class="faq-item"><div class="row"><span class="q">Как происходит оплата и когда списываются деньги?</span><span class="faq-plus">+</span></div></div>
+      <div class="faq-item"><div class="row"><span class="q">А если посылка потеряется или повредится?</span><span class="faq-plus">+</span></div></div>
+      <div class="faq-item"><div class="row"><span class="q">Сколько стоит доставка и от чего зависит цена?</span><span class="faq-plus">+</span></div></div>
+      <div class="faq-item"><div class="row"><span class="q">Что насчёт таможни и пошлин?</span><span class="faq-plus">+</span></div></div>
+      <div class="faq-item"><div class="row"><span class="q">Нужны ли документы при передаче?</span><span class="faq-plus">+</span></div></div>
+      <div class="faq-item"><div class="row"><span class="q">Что делать, если возник спор с путешественником?</span><span class="faq-plus">+</span></div></div>
+      <div class="faq-item"><div class="row"><span class="q">Что нужно, чтобы самому доставлять посылки и зарабатывать?</span><span class="faq-plus">+</span></div></div>
+      <div class="faq-item"><div class="row"><span class="q">В каких странах работает Trely?</span><span class="faq-plus">+</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <span class="eyebrow">Готовы начать?</span>
+    <h2>Отправьте посылку<br/><span class="gold">за пару минут</span></h2>
+    <p>Найдите путешественника по маршруту прямо сейчас — обычно первый отклик приходит в течение часа.</p>
+    <div class="cta-buttons">
+      <button class="btn-primary">Разместить заявку</button>
+      <button class="btn-secondary">Стать путешественником</button>
+    </div>
+    <div style="margin-top:32px"><span class="brand-divider">Move <span>|</span> Live <span>|</span> Connect</span></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="brand">
+        <a class="logo" href="/"><img src="assets/logo/trely-black.svg" alt=""><span>Trely</span></a>
+        <p>Зачем ждать и переплачивать? Найдите человека, который уже летит в нужный город — и доверьте ему доставку.</p>
+        <div class="socials">
+          <span class="soc"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></span>
+          <span class="soc"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5a11.5 11.5 0 0 0-16 16L3 22l2.7-1.5A11.5 11.5 0 1 0 20.5 3.5z"/></svg></span>
+          <span class="soc" style="font-weight:700;font-size:14px">in</span>
+          <span class="soc" style="font-size:11px">▶</span>
+        </div>
+      </div>
+      <div class="col">
+        <h4>Сервис</h4>
+        <ul>
+          <li><a href="#">Отправить посылку</a></li>
+          <li><a href="#">Стать доставщиком</a></li>
+          <li><a href="#">Объявления</a></li>
+          <li><a href="#">Цены</a></li>
+          <li><a href="#">Калькулятор</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Направления</h4>
+        <ul>
+          <li><a href="#">Москва → Бали</a></li>
+          <li><a href="#">Стамбул → Минск</a></li>
+          <li><a href="#">Дубай → Тбилиси</a></li>
+          <li><a href="#">Все маршруты</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Помощь</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Безопасность</a></li>
+          <li><a href="#">Что передавать</a></li>
+          <li><a href="#">Поддержка</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Компания</h4>
+        <ul>
+          <li><a href="#">О Trely</a></li>
+          <li><a href="#">Блог</a></li>
+          <li><a href="#">Карьера</a></li>
+          <li><a href="#">Пресс-кит</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>Trely, 2026 · Все права защищены</div>
+      <div class="legal"><a href="#">Политика конфиденциальности</a><a href="#">Пользовательское соглашение</a><a href="#">Cookies</a></div>
+      <div>Остались вопросы? Пишите — мы на связи 24/7</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
